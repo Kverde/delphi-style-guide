@@ -25,21 +25,21 @@
 
 **Примеры правильного использования:**
 
-    ```Pascal    
-    function TMyClass.MyFunc(var Value: Integer);
-    MyPointer := @MyRecord;
-    MyClass := TMyClass(MyPointer);
-    MyInteger := MyIntegerArray[5];
-    ```
+```pascal    
+function TMyClass.MyFunc(var Value: Integer);
+MyPointer := @MyRecord;
+MyClass := TMyClass(MyPointer);
+MyInteger := MyIntegerArray[5];
+```
 
 **Примеры неправильного использования:**
 
-    ```Pascal
-    function TMyClass.MyFunc( var Value: Integer ) ;
-    MyPointer := @ MyRecord;
-    MyClass := TMyClass ( MyPointer ) ;
-    MyInteger := MyIntegerArray [ 5 ] ;
-    ```
+```pascal
+function TMyClass.MyFunc( var Value: Integer ) ;
+MyPointer := @ MyRecord;
+MyClass := TMyClass ( MyPointer ) ;
+MyInteger := MyIntegerArray [ 5 ] ;
+```
 
 ## Средства для автоматического форматирования
 
