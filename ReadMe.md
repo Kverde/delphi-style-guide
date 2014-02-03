@@ -1,4 +1,4 @@
-# Рекомендации по оформлению исходного кода DELPHI
+## Рекомендации по оформлению исходного кода DELPHI
 
 Этот файл содержит набор рекомендаций предназначенных для облегчения понимания и упрощения поддержки кода написанного Delphi. Помимо правил по форматированию исходного кода в тексте также содержатся советы которые могут помочь избежать ошибок.
 
@@ -41,25 +41,25 @@ MyClass := TMyClass ( MyPointer ) ;
 MyInteger := MyIntegerArray [ 5 ] ;
 ```
 
-## Средства для автоматического форматирования
+### Средства для автоматического форматирования
 
-### JEDI Code Format
+#### JEDI Code Format
  [JEDI Code Format](http://jedicodeformat.sourceforge.net/) - отдельное приложение для форматирования исходных кодов Object Pascal и Delphi.
   
 
-### Experimental GExperts Version 
+#### Experimental GExperts Version 
 [Это экспериментальная версия](http://www.dummzeuch.de/delphi/gexperts/english.html) эксперта для IDE RAD Studio [GExpert](http://www.gexperts.org/).  
 
 Поддерживаемые версии IDE: 6, 7, 2005, 2006, 2007, 2009, 2010, XE1, XE2.
 
-### Стандартное форматирование кода в Delphi 2010
+#### Стандартное форматирование кода в Delphi 2010
 
 Начиная с Delphi 2010 в IDE добавлено стандартное средство для автоматического форматирования исходного кода. Иллюстрированные справочник с описанием.
 
   * [Описание в Embarcadero wiki](http://docwiki.embarcadero.com/RADStudio/XE5/en/Source_Code_Formatter)
   * [Иллюстрированный справочник](http://www.webdelphi.ru/2010/10/formatter-delphi-xe-2/)
 
-## Основано на следующих статьях
+### Основано на следующих статьях
 
   * [Стиль оформления кода (gunsmoker.ru)](http://www.gunsmoker.ru/2010/07/blog-post.html)
   * [Стандарт стилевого оформления исходного кода DELPHI (DelphiKingdom.com)](http://www.delphikingdom.com/asp/viewitem.asp?catalogid=802)
