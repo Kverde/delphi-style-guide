@@ -6,6 +6,10 @@
 
 Подразумевается что разработка ведется с использованием системы контроля версий.
 
+### Оглавление
+
+### Идентификаторы
+
 ### использование пробелов и переносов строк
 
 #### Пробелы, запрещенные к использованию
@@ -18,55 +22,48 @@
   * После открывающей квадратной скобки [ или перед закрывающей ];
   * Перед точкой с запятой;
 
-**Правильно**
-
 ```pascal    
-function TMyClass.MyFunc(var Value: Integer);
-MyPointer := @MyRecord;
-MyClass := TMyClass(MyPointer);
-MyInteger := MyIntegerArray[5];
-```
+// Правильно
+  function TMyClass.MyFunc(var Value: Integer);
+  MyPointer := @MyRecord;
+  MyClass := TMyClass(MyPointer);
+  MyInteger := MyIntegerArray[5];
 
-**Неправильно**
-
-```pascal
-function TMyClass.MyFunc( var Value: Integer ) ;
-MyPointer := @ MyRecord;
-MyClass := TMyClass ( MyPointer ) ;
-MyInteger := MyIntegerArray [ 5 ] ;
+// Неправильно
+  function TMyClass.MyFunc( var Value: Integer ) ;
+  MyPointer := @ MyRecord;
+  MyClass := TMyClass ( MyPointer ) ;
+  MyInteger := MyIntegerArray [ 5 ] ;
 ```
 
 Двоеточие для всех объявлений переменных не должно содержать перед собой пробелов и иметь один пробел после перед именем типа. 
 
-**Правильно**
+
 ```pascal
+//Правильно
 var
   i: Integer;
-...
-procedure Foo(Param1: Integer; Param2: Integer);
-```
 
-**Неправильно**
-```pascal
+  procedure Foo(Param1: Integer; Param2: Integer);
+
+// Неправильно
 var
   i :Integer;
-...  
-procedure Foo( Param :Integer; Param2:Integer );
+  
+  procedure Foo( Param :Integer; Param2:Integer );
 ```
 
 #### Пробел должен стоять
   * После запятой;
   * Перед и после оператора присваивания, и операторами сравнения;
 
-**Правильно**
 ```pascal
+  // Правильно
   MyProc(1, 'SecondParam', 3);
   
   i := 1;
-```
 
-**Неправильно**
-```pascal
+  // Неправильно
   MyProc(1,'SecondParam',3);
   
   i:=1;
@@ -76,12 +73,13 @@ procedure Foo( Param :Integer; Param2:Integer );
 
 В некоторых случаях можно использовать несколько пробелов для выравнивания строк. Обычно это относится к оператору присваивания и объявлению переменных.
 
-**Правильно**
 ```pascal
+  // Правильно
 var
   Counter  : Integer;
   MyString : string;
-...
+
+  
   OraSession.Password := 'MyPassvord';
   OraSession.Server   := 'MyServer';
   OraSession.Username := 'MyLogin';
@@ -89,8 +87,9 @@ var
 
 Объединять строки в такие столбцы нужно только если строки в левой части имеют разницу в длине не больше пяти символов.
 
-**Неправильно**
 ```pascal
+  // Неправильно
+  
   MyBigIdentifier := 125;
   i               := 2;
 ```
@@ -99,8 +98,8 @@ var
 
 Всегда необходимо использовать два пробела для всех уровней отступа. Другими словами, первый уровень отступает на два пробела, второй на четыре и так далее. Никогда не используйте символы табуляции.
 
-**Примеры правильного использования**
 ```pascal
+// Правильно
 program MyProgram;
 begin
   if IsValid then
@@ -111,10 +110,8 @@ begin
   
   DoSomething3;
 end.
-```
 
-**Примеры неправильного использования**
-```pascal
+// Неправильно
 program MyProgram;
 begin
 if IsValid then
@@ -126,7 +123,7 @@ DoSomething3;
 end.
 ```
 
-Зарезервированные слова unit, uses, type, interface, implementation, initialization и finalization всегда должны примыкать к левой границе. Также должны быть отформатирован end завершающий модуль. В файле проекта (dpr) выравнивание по левой границе применяется к словам program, главным begin и end. Код внутри блока begin..end должен иметь отступ два символа.
+Зарезервированные слова **unit**, **uses**, **type**, **interface**, **implementation**, **initialization** и **finalization** всегда должны примыкать к левой границе. Также должны быть отформатирован end завершающий модуль. В файле проекта (dpr) выравнивание по левой границе применяется к словам **program**, главным **begin** и **end**. Код внутри блока **begin**..**end** должен иметь отступ два символа.
 
 #### Переносы строк
 
@@ -145,34 +142,20 @@ function CreateWindowEx(dwExStyle: DWORD;
 
 На одной строке должно находится не более одного оператора или команды.
 
-**Правильно**
+****
 ```pascal
+  // Правильно
   Count := 4;
   MyProc(Count);
-```
 
-**Неправильно**
-```pascal
+  // Неправильно
   Count := 4; MyProc(Count);
 ```
 
-Оператор if (while, for) всегда должен располагаться, по крайней мере, на двух строках.
+Строки с ключевыми словами **begin**, **else**, **end**, **var**, **const**, **type** не должны содержать другого кода. 
 
-**Правильно**
 ```pascal
-  if A < B then DoSomething;
-```
-
-**Неправильно**
-```pascal
-  if A < B then 
-    DoSomething;  
-```
-
-Строки с ключевыми словами begin, else, end, var, const, type не должны содержать другого кода. 
-
-**Неправильно**
-```pascal
+  // Неправильно
   for i := 0 to 10 do begin
     DoSomething1; 
     DoSomething2;
@@ -181,10 +164,8 @@ function CreateWindowEx(dwExStyle: DWORD;
   procedure MyProc;
   var a, b: Integer;
   begin
-```
 
-**Неправильно**
-```pascal
+  // Правильно
   for i := 0 to 10 do 
   begin
     DoSomething1;
@@ -198,7 +179,95 @@ function CreateWindowEx(dwExStyle: DWORD;
   begin
 ```
 
-### Идентификаторы
+### Операторы
+
+Операторы - это одна или более строк кода, разделенных точкой с запятой. Простые операторы имеют одну точку с запятой, а составные могут иметь более чем одну точку с запятой и, таким образом, состоят из множества простых операторов.
+
+```pascal
+  // Это простой оператор:
+  A := B; 
+
+  // Это составной или структурированный оператор:
+  begin
+    B := C;
+    A := B;
+  end;
+```
+Оператор if (while, for) всегда должен располагаться, по крайней мере, на двух строках.
+
+```pascal
+  // Правильно
+  if A < B then DoSomething;
+
+  // Неправильно
+  if A < B then 
+    DoSomething;  
+```
+
+Если внутри оператора if (while, for) используется составной оператор, то для него не нужно делать отступ.
+
+```pascal
+  // Неправильно
+  if A < B then 
+    begin
+      DoSomething1;  
+	  DoSomething2; 
+    end;
+	  	
+  if A < B then 
+  begin
+    DoSomething1;  
+	DoSomething2; 
+  end 
+  else begin
+    DoSomething3;  
+	DoSomething4; 
+  end;  
+	
+  // Правильно
+  if A < B then 
+  begin
+    DoSomething1;  
+	DoSomething2; 
+  end;
+	  	
+  if A < B then 
+  begin
+    DoSomething1;  
+	DoSomething2; 
+  end 
+  else 
+  begin
+    DoSomething3;  
+	DoSomething4; 
+  end;  
+```
+
+#### Оператор case
+
+Рекомендуемое оформление оператора case:
+
+```pascal
+ case ScrollCode of
+    SB_LINEUP, SB_LINEDOWN:
+      begin
+        Incr := FIncrement div FLineDiv;
+        FinalIncr := FIncrement mod FLineDiv;
+        Count := FLineDiv;
+      end;
+    SB_PAGEUP, SB_PAGEDOWN:
+      begin
+        Incr := FPageIncrement;
+        FinalIncr := Incr mod FPageDiv;
+        Incr := Incr div FPageDiv;
+        Count := FPageDiv;
+      end;
+  else
+    Count := 0;
+    Incr := 0;
+    FinalIncr := 0;
+  end;
+```
 
 ### Комментарии
 
