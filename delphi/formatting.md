@@ -58,18 +58,15 @@ var
   Counter: Integer;
   MyString: string;
 
-  
   OraSession.Password:= 'MyPassvord';
   OraSession.Server:= 'MyServer';
   OraSession.Username:= 'MyLogin';
-
 
 // Правильно
 var
   Counter  : Integer;
   MyString : string;
 
-  
   OraSession.Password := 'MyPassvord';
   OraSession.Server   := 'MyServer';
   OraSession.Username := 'MyLogin';
