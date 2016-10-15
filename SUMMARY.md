@@ -1,5 +1,7 @@
 # Summary
+
 * [Введение](Introduction.md)
-* Delphi
-   * [Правила именования](delphi/naming_convention.md)
+* [Delphi](delphi.md)
+    * [Правила именования](delphi/naming_convention.md)
+* [OldText](ReadMe.md)
 
