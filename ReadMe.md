@@ -6,4 +6,4 @@
 
 Любое из этих правил может быть нарушено, но на это должна быть веская причина.
 
-[Читать через GitBook](https://kverde.gitbooks.io/delphi-style-guide/content/)
+[Читать через GitBook](https://kverde.gitbook.io/delphi-style-guide/)
